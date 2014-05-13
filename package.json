@@ -1,11 +1,11 @@
 {
-  "name": "lineman-angular-template",
-  "title": "An HTML/JS/CSS app using Angular.JS",
+  "name": "learn-angular-with-lineman",
+  "title": "Learn Angular with Lineman",
   "version": "0.0.1",
   "private": true,
   "author": {
-    "name": "John Doe",
-    "company": "ACME, Inc."
+    "name": "Jim Li",
+    "company": "E-link Media"
   },
   "devDependencies": {
     "bootstrap-sass": "^3.1.1",
