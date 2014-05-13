@@ -1,0 +1,13 @@
+doctype html
+html(ng-app="app")
+  head
+    title= pkg.name
+    link(rel="stylesheet", type="text/css", href="/css/app.css", media="all")
+
+  body
+    .row
+      .large-12
+        h1 A Lineman Angular Setup
+        #view(ng-view)
+
+    script(type="text/javascript", src="/js/app.js")
