@@ -8,13 +8,15 @@
     "company": "ACME, Inc."
   },
   "devDependencies": {
+    "bootstrap-sass": "^3.1.1",
     "coffee-script": "~1.6.3",
+    "grunt": "^0.4.5",
+    "grunt-contrib-sass": "^0.7.3",
     "jasmine-given": "~2.1.0",
     "lineman": ">= 0.28.0",
     "lineman-angular": ">= 0.2.0",
     "lineman-bower": "0.0.3",
     "lineman-jade": "^0.1.2",
-    "lineman-less": "0.0.1",
     "protractor": ">=0.8.0"
   },
   "scripts": {

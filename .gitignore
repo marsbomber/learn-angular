@@ -7,3 +7,5 @@
 /generated
 
 /vendor/bower
+
+.sass-cache/
