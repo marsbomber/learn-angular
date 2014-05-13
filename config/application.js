@@ -34,10 +34,10 @@ module.exports = function(lineman) {
       //
       // apiProxy: {
       //   enabled: true,
-      //   host: 'localhost',
-      //   port: 3000
+      //   port: 3000,
+      //   prefix: 'api' // request paths that contain 'api' will now be the only ones forwarded to the apiProxy
       // }
-    }
+    },
 
     // Sass
     //
@@ -54,6 +54,20 @@ module.exports = function(lineman) {
     // via grunt-asset-fingerprint
     //
     // enableAssetFingerprint: true
+
+
+    // https://github.com/linemanjs/lineman-angular-template#defining-your-apps-angularmodule-in-coffeescript
+    concat_sourcemap: {
+      js: {
+        src: [
+          "<%= files.js.vendor %>",
+          "<%= files.coffee.generated %>",
+          "<%= files.js.app %>",
+          "<%= files.ngtemplates.dest %>"
+        ]
+      }
+    }
+
 
   };
 };
