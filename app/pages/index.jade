@@ -1,11 +1,10 @@
 doctype html
-html(ng-app="app")
+html(ng-app="app", ng-controller="ApplicationController")
   head
     title= pkg.title
     link(rel="stylesheet", type="text/css", href="/css/app.css", media="all")
 
   body
-    .container
-      #view(ng-view)
+    .container(ui-view)
 
     script(type="text/javascript", src="/js/app.js")

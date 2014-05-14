@@ -1,10 +1,16 @@
-angular.module("app", ["ngResource", "ngRoute"]).run(function($rootScope) {
-  // adds some basic utilities to the $rootScope for debugging purposes
-  $rootScope.log = function(thing) {
-    console.log(thing);
-  };
+angular.module("app", ["ngResource", "ui.router"])
+  .run(['$rootScope', '$state', '$stateParams', function($rootScope, $state, $stateParams) {
 
-  $rootScope.alert = function(thing) {
-    alert(thing);
-  };
-});
+    $rootScope.$state       = $state;
+    $rootScope.$stateParams = $stateParams;
+
+    $rootScope.log = function(thing) {
+      console.log(thing);
+    };
+
+    $rootScope.alert = function(thing) {
+      alert(thing);
+    };
+  }
+
+]);
