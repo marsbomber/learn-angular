@@ -12,11 +12,10 @@ angular.module("app")
       })
       .state("login", {
         url: "/login",
-        templateUrl: "login.html",
+        templateUrl: "login/index.html",
         controller: "LoginController",
         authenticate: false
       });
-
 
     $urlRouterProvider.otherwise('/login');
 
