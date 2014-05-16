@@ -1,4 +1,8 @@
-angular.module("app").controller('HomeController', function($scope, $location, AuthenticationService) {
+var app = angular.module("app");
+
+app.controller('HomeController',
+               ["$scope", "$location", "AuthenticationService",
+                function($scope, $location, AuthenticationService) {
   $scope.title = "Home";
   $scope.message = "Mouse Over these images to see a directive at work";
 
@@ -9,4 +13,4 @@ angular.module("app").controller('HomeController', function($scope, $location, A
   $scope.logout = function() {
     AuthenticationService.logout().success(onLogoutSuccess);
   };
-});
+}]);

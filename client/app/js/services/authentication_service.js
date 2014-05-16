@@ -1,6 +1,8 @@
 var app = angular.module("app");
 
-app.factory("AuthenticationService", function($http, $sanitize, $timeout, SessionService, FlashService) {
+app.factory("AuthenticationService",
+            ["$http", "$sanitize", "$timeout", "SessionService", "FlashService",
+             function($http, $sanitize, $timeout, SessionService, FlashService) {
 
   var cacheSession   = function() {
     SessionService.set('authenticated', true);
@@ -32,4 +34,4 @@ app.factory("AuthenticationService", function($http, $sanitize, $timeout, Sessio
       return SessionService.get('authenticated');
     }
   };
-});
+}]);

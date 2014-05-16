@@ -1,4 +1,8 @@
-angular.module("app").controller('LoginController', function($scope, $location, AuthenticationService) {
+var app = angular.module("app");
+
+app.controller('LoginController',
+               ["$scope", "$location", "AuthenticationService",
+                function($scope, $location, AuthenticationService) {
   $scope.credentials = { username: "", password: "" };
 
   $scope.login = function() {
@@ -6,4 +10,4 @@ angular.module("app").controller('LoginController', function($scope, $location, 
       $location.path('/home');
     });
   };
-});
+}]);

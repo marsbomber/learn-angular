@@ -1,6 +1,8 @@
 var app = angular.module("app");
 
-app.factory("FlashService", function($rootScope) {
+app.factory("FlashService",
+            ["$rootScope",
+             function($rootScope) {
   return {
     show: function(message) {
       $rootScope.flash = message;
@@ -9,4 +11,4 @@ app.factory("FlashService", function($rootScope) {
       $rootScope.flash = "";
     }
   };
-});
+}]);

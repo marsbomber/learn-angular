@@ -1,22 +1,22 @@
-angular.module("app")
-  .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+var app = angular.module("app");
 
-    // $locationProvider.html5Mode(true);
+app.config(['$stateProvider', '$urlRouterProvider',
+         function($stateProvider, $urlRouterProvider) {
 
-    $stateProvider
-      .state("home", {
-        url: "/home",
-        templateUrl: "home.html",
-        controller: "HomeController",
-        authenticate: true
-      })
-      .state("login", {
-        url: "/login",
-        templateUrl: "login/index.html",
-        controller: "LoginController",
-        authenticate: false
-      });
+  // $locationProvider.html5Mode(true);
 
-    $urlRouterProvider.otherwise('/login');
+  $stateProvider
+    .state("home", {
+      url: "/home",
+      templateUrl: "home.html",
+      controller: "HomeController"
+    })
+    .state("login", {
+      url: "/login",
+      templateUrl: "login/index.html",
+      controller: "LoginController"
+    });
 
-  }]);
+  $urlRouterProvider.otherwise('/login');
+
+}]);

@@ -1,7 +1,8 @@
-var app = angular.module("app", ["ngResource", "ui.router", "ngSanitize"]);
+var app = angular.module("app", ["ngResource", "ui.router", "ngSanitize", "restangular"]);
 
+app.run(['$rootScope', '$state', '$stateParams', '$location', 'AuthenticationService', 'FlashService',
+         function($rootScope, $state, $stateParams, $location, AuthenticationService, FlashService) {
 
-app.run(['$rootScope', '$state', '$stateParams', '$location', 'AuthenticationService', 'FlashService', function($rootScope, $state, $stateParams, $location, AuthenticationService, FlashService) {
   $rootScope.$state       = $state;
   $rootScope.$stateParams = $stateParams;
 
@@ -14,8 +15,7 @@ app.run(['$rootScope', '$state', '$stateParams', '$location', 'AuthenticationSer
     }
   });
 
-  }
-]);
+}]);
 
 app.config(function($httpProvider) {
 
